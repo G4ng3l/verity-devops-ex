@@ -61,9 +61,9 @@ pipeline {
 
         		//Code starts for stage Code Coverage
 		stage('Code Coverage') {
-            steps([
-                $class:'JacocoPublisher'
-            ])
+            steps {
+                step([$class: 'JacocoPublisher'])
+            }
         }
 		//Code ends for stage Code Coverage
     }
